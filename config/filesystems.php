@@ -64,6 +64,12 @@ return [
             'bucket' => env('AWS_BUCKET'),
             'url' => env('AWS_URL'),
         ],
+        'uploads' => [
+            'driver' => 'local',
+            //create user_images directory in the public folder
+            'root' => public_path() . '/user_images',
+            //https://laracasts.com/discuss/channels/general-discussion/l5-disable-csrf-middleware-on-certain-routes
+        ],
 
     ],
 
